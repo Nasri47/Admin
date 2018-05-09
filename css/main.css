@@ -1,12 +1,13 @@
 #leftDiv{
   position: absolute;
   height: 100% ;
-  width: 30px ;
+  width: 300px ;
   background-color: red ;
 }
+
 #loginCard{
   position: absolute;
-  left: 10px ;
-  top: 30px ;
+  height: 100% ;
+  width: 30px ;
   background-color: red ;
 }
