@@ -12,15 +12,15 @@
   width: 400px ;
 }
 
+#leftSide{
+  background-color: transparent;
+  border-color: transparent;
+}
+
 #card{
-  padding: 16px ;
   border-width: 16px ;
 }
 
-#login{
-  margin-bottom: 16px ;
-  font-size: 18pt ;
-}
 
 #userInput{
   margin-bottom: 32px ;
@@ -30,4 +30,8 @@
 }
 #loginBt{
  margin-bottom: 64px ; 
+}
+#requstText{
+  text-align: right;
+  font-size: 16pt ;
 }
