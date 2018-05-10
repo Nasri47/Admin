@@ -29,3 +29,9 @@
   text-align: right;
   font-size: 16pt ;
 }
+
+#blockList{
+  position: absolute;
+  left: 90% ;
+  top: 90% ;
+}

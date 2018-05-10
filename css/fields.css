@@ -5,13 +5,6 @@
   background-color: #18A7B5 ;
 }
 
-#loginCard{
-  position: absolute;
-  left: 36% ;
-  top: 30% ;
-  width: 400px ;
-}
-
 #leftSide{
   background-color: transparent;
   border-color: transparent;
@@ -19,6 +12,7 @@
 
 #card{
   border-width: 16px ;
+  padding-left: 0px ;
 }
 
 
@@ -29,9 +23,15 @@
   margin-bottom: 32px ;
 }
 #loginBt{
- margin-bottom: 64px ; 
+  height: 92px ;
 }
 #requstText{
   text-align: right;
   font-size: 16pt ;
+}
+
+#blockList{
+  position: absolute;
+  left: 90% ;
+  top: 90% ;
 }
