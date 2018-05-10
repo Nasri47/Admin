@@ -1,0 +1,31 @@
+#leftDiv{
+  position: absolute;
+  height: 100% ;
+  width: 30px ;
+  background-color: #18A7B5 ;
+}
+
+#leftSide{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#card{
+  border-width: 16px ;
+  padding-left: 0px ;
+}
+
+
+#userInput{
+  margin-bottom: 32px ;
+}
+#userPass{
+  margin-bottom: 32px ;
+}
+#loginBt{
+  height: 92px ;
+}
+#requstText{
+  text-align: right;
+  font-size: 16pt ;
+}
