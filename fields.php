@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+<?php
+   include('session.php');
+?>
 <html>
-	<title>B Books</title>
+	<title>Fields</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/fields.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">

@@ -5,7 +5,7 @@ function OpenCon()
   $dbhost = "localhost";
   $dbuser  = "root";
   $dbpass  = "";
-  $db  = "lybarary";
+  $db  = "reservationapp";
  
  
  $conn = new mysqli($dbhost, $dbuser, $dbpass,$db) or die("Connect failed: %s\n". $conn -> error);

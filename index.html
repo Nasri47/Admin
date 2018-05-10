@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-	<title>B Books</title>
+	<title>Admin</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -13,10 +13,10 @@
 		<div id="loginCard" class="w3-container">
 			<div id="card" class="w3-card w3-panel w3-border">
 				<p id="login">Login</p>
-				<form>
-					<input id="userInput" class="w3-input" type="text">
-					<input id="userPass" class="w3-input" type="password">
-					<a href="fields.html" id="loginBt" class="w3-button w3-teal">Login</a>
+				<form action="index.php" method="post">
+					<input id="userInput" required="required" class="w3-input" type="text" name = "username">
+					<input id="userPass" required="required" class="w3-input" type="password" name = "password">
+					<input id="loginBt" class="w3-button w3-teal" type="submit" value="Login" name="submit">
 				</form>
 			</div>
 		</div>
