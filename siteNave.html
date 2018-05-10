@@ -7,7 +7,7 @@
 
 	<body>
 
-		<div class="w3-bar w3-border w3-green w3-row">
+		<div class="w3-bar w3-border w3-teal w3-row">
 			<div class="w3-col s3 w3-center">
 				<a href="#" class="w3-bar-item w3-button w3-padding-16 ">Icon</a>
 			</div>
@@ -15,10 +15,10 @@
 				<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Users</a>
 			</div>
 			<div class="">	
-				<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Fields</a>
+				<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Register Requests</a>
 			</div>
 			<div class="">
-				<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Register Requests</a>
+				<a href="#" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Fields</a>
 		    </div>
 		    <div class="w3-col s2 w3-center">
 				<div id="leftSide" class="w3-panel w3-center">
@@ -34,15 +34,25 @@
 			<div class="w3-col s6 ">
 				<div id="card" class="w3-card w3-panel w3-border ">
 					<div class="w3-bar w3-row">
-						<div class="w3-col s6 ">
+						<div class="w3-col s4 ">
 							<div id="leftSide" class="w3-panel "></div>
 						</div>
-						<p id="requstText" class="w3-col s6">صاحب ميدان المجد يطلب تسجيل أن يتم تسجيله في التطبيق الخاص بك .</p><br>
+						<p id="requstText" style="text-align: right; font-size: 16pt;" class="w3-col s8">
+							يطلب صاحب ميدان المجد أن يتم تسجيل الميدان الخاص به في التطبيق
+						</p><br>
 						<div class="w3-col s10">
-							<a href="#" id="loginBt" class="">التفاصيل</a>
+							<a style="text-align: right; font-size: 14pt ; font-family: bold ; background-color: transparent;" href="#" class="w3-dropdown-hover">
+							التفاصيل
+								<div class="w3-dropdown-content w3-card-4" style="width:250px">
+								    <div class="w3-container">
+								      <p>London is the capital city of England.</p>
+								      <p>It is the most populous city in the UK.</p>
+								    </div>
+								  </div>
+							</a>
 						</div>
-						<a href="#" id="loginBt" class="w3-col s1">رفض</a>
-						<a href="#" id="loginBt" class="w3-col s1">قبول</a>
+						<a style="text-align: right; font-size: 14pt ; color: red ;" href="#" id="loginBt" class="w3-col s1">رفض</a>
+						<a style="text-align: right; font-size: 14pt ; color: green ;" href="#" id="loginBt" class="w3-col s1">قبول</a>
 					</div>
 				</div>
 			</div>
