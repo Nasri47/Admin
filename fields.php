@@ -20,7 +20,7 @@
 				<a href="registRequists.php" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Register Requests</a>
 			</div>
 			<div class="">
-				<a href="fields.php" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center w3-white w3-text-teal">Fields</a>
+				<a href="fieldsList.php" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center w3-white w3-text-teal">Fields</a>
 		    </div>
 		    <div class="w3-col s2 w3-center">
 				<div id="leftSide" class="w3-panel w3-center">
@@ -50,6 +50,8 @@
 				</div>
 			</div>
 	    </div>
+
+	    <a href="addField.html" style="position: absolute; left: 90% ; top: 90% ;" class="w3-button w3-teal">Add Field</a>
 
 	</body>
 </html>

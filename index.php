@@ -20,7 +20,7 @@ include 'connection.php';
       if($count == 1) {
          $_SESSION['login_user'] = $myusername;
          
-         header("location: fields.php");
+         header("location: fieldsList.php");
       }else {
          echo '<div style="color: red ; position: absolute; top: 500px ; left: 580px ; text-align: center;">The username or <br> password you enterd is no correct</div>';
       }
