@@ -1,6 +1,4 @@
 <?php 
-function OpenCon()
- {
   global  $dbuser , $dbpass , $db ; 
   $dbhost = "localhost";
   $dbuser  = "root";
@@ -12,8 +10,7 @@ function OpenCon()
  
  
  return $conn;
- }
-function CloseCon($conn)
+ function CloseCon($conn)
  {
  $conn -> close();
  }

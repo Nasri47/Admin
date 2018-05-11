@@ -1,7 +1,6 @@
 <?php
 include 'index.html' ;
 include 'connection.php';
-$conn = OpenCon();
      session_start();
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,7 +22,7 @@ $conn = OpenCon();
          
          header("location: fields.php");
       }else {
-        // header("location: index.php ");
+         echo '<div style="color: red ; position: absolute; top: 500px ; left: 580px ; text-align: center;">The username or <br> password you enterd is no correct</div>';
       }
    }
 
