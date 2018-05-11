@@ -10,13 +10,20 @@
      $rows = mysqli_num_rows($result);
      $butArray = array();
 
+     if (isset($_POST['reject']))
+        {
+           header("location: fields.php");
+        } elseif (isset($_POST['confirm'])) {
+            header("location: fields.php");
+        }
+
 
     for ($j = 1 ; $j <= $rows; $j++)
     {
         $return = "";   
         $row = mysqli_fetch_row($result);
 
-        $return = $return . '<div class="w3-bar w3-row ">
+        $return = $return . '<div class="w3-bar w3-row " id="cardBlock">
                 <div class="w3-col s3 ">
                     <div id="leftSide" class="w3-panel "></div>
                 </div>
@@ -40,9 +47,9 @@
                                       </div>
                                 </a>
                             </div>
-                            <form  action="remove.php" method="post">
-                            <a style="text-align: right; font-size: 14pt ; color: red ;" href="" id="loginBt" class="w3-col s1" name="reject" type="submit">رفض</a>
-                            <a style="text-align: right; font-size: 14pt ; color: green ;" href="" id="loginBt" class="w3-col s1" name="confirm" type="submit"> قبول</a>
+                            <form  action="registRequists.php" method="post">
+                            <input style="text-align: right; font-size: 14pt ; color: red ;" href="" id="loginBt" class="w3-col s1" name="reject" type="submit" value="رفض">
+                            <input style="text-align: right; font-size: 14pt ; color: green ;" href="" id="loginBt" class="w3-col s1" name="confirm" type="submit" value="قبول">
                             </form>
                         </div>
                     </div>
@@ -54,10 +61,6 @@
             </div> ' ;
 
     echo  $return;
-}
-
-function getRespons(){
-
 }
 
 ?>
