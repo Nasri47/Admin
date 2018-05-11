@@ -17,7 +17,7 @@
 				<a href="users.html" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Users</a>
 			</div>
 			<div class="">	
-				<a href="registRequists.html" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Register Requests</a>
+				<a href="registRequists.php" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center">Register Requests</a>
 			</div>
 			<div class="">
 				<a href="fields.php" class="w3-bar-item w3-button w3-padding-16 w3-col s2 w3-center w3-white w3-text-teal">Fields</a>
