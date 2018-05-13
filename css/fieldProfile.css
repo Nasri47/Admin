@@ -1,0 +1,37 @@
+#leftDiv{
+  position: absolute;
+  height: 100% ;
+  width: 30px ;
+  background-color: #81e8dd ;
+}
+
+#loginCard{
+  position: absolute;
+  left: 36% ;
+  top: 30% ;
+  width: 400px ;
+}
+
+#card{
+  padding: 16px ;
+  border-width: 16px ;
+}
+
+#login{
+  margin-bottom: 16px ;
+  font-size: 18pt ;
+}
+
+#userInput{
+  margin-bottom: 32px ;
+}
+#userPass{
+  margin-bottom: 32px ;
+}
+#loginBt{
+ margin-bottom: 64px ; 
+}
+
+#bar{
+  background-color: #008B8B ;
+}

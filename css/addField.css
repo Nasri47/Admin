@@ -30,7 +30,7 @@
   margin-bottom: 32px ;
 }
 
-#loginBt{
+#addButt{
   margin-bottom: 32px ;
 }
 
@@ -52,4 +52,68 @@
 
 #loginBt{
  margin-bottom: 64px ; 
+}
+
+#nameMess {
+    position: absolute;
+    top: 130px ;
+    left: 900px ;
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#phoneMess {
+    position: absolute;
+    top: 260px ;
+    left: 900px ;
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#passMess {
+    position: absolute;
+    top: 320px ;
+    left: 900px ;
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#passConMess{
+    position: absolute;
+    top: 430px ;
+    left: 900px ;
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10004" ;
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10006" ;
 }

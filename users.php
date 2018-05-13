@@ -21,10 +21,10 @@
 
                     <div class='w3-bar w3-row'>
             <div class='w3-col s3'>
-                <div id='leftSide' class='w3-panel '></div>
+                <div id='leftSide' class='w3-panel'></div>
             </div>
             <div class='w3-col s6 '>
-                <div id='card' class='w3-card w3-panel w3-border '>
+                <div id='card' class='w3-card w3-panel w3-border'>
                     <div class='w3-bar w3-row'>
                     <form action='block.php' method='post'>
                             <input name='name' value='$row[0]' hidden>

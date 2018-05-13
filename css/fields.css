@@ -10,10 +10,9 @@
   border-color: transparent;
 }
 
-#car{
+#card{
   border-width: 16px ;
-  padding: 0 ;
-  margin: 0 ;
+  padding-left: 0px ;
 }
 
 
@@ -25,6 +24,8 @@
 }
 #loginBt{
   height: 92px ;
+  text-align: center;
+  padding-top: 30px ;
 }
 #requstText{
   text-align: right;
