@@ -1,5 +1,5 @@
 <?php
-include 'registRequists.html' ;
+include 'blockRequests.html' ;
 include 'connection.php';
 
 session_start();
@@ -8,26 +8,27 @@ if (!isset($_SESSION['login_user'])) {
     header('Location: index.php');
 }
 
-$query = $conn->prepare("SELECT * FROM field");
+$query = $conn->prepare("SELECT * FROM blockRequests");
 $query->execute();
 $result = $query->fetchall();
 
 foreach($result as $row)
 {
-    $field_city = $row[5];
-    $ownership = $conn->prepare("SELECT * FROM ownership WHERE $row[0] = field_id"); 
-            $ownership->execute();
-            $OwnerResult = $ownership->fetchall();
-            foreach($OwnerResult as $ownerRow){
-                $user = $conn->prepare("SELECT * FROM users WHERE $ownerRow[2] = user_id"); 
+    $field = $conn->prepare("SELECT * FROM field WHERE $row[1] = field_id"); 
+            $field->execute();
+            $fieldResult = $field->fetchall();
+            foreach($fieldResult as $fieldRow){
+                $fieldName = $fieldRow[1];
+            }
+                $user = $conn->prepare("SELECT * FROM users WHERE $row[2] = user_id"); 
             $user->execute();
             $userResult = $user->fetchall();
             foreach($userResult as $userRow){
                 $userName = $userRow[1] ;
                 $userPhone = $userRow[2] ;
-
+            }
                 $return = "";
-    if ($row[9] == 0) {
+    if ($row[4] == 0) {
         $return =
         $return . "<div class='w3-bar w3-row ' id='cardBlock'>
             <div class='w3-col s4 '>
@@ -40,17 +41,19 @@ foreach($result as $row)
                             <div id='leftSide' class='w3-panel '></div>
                         </div>
                         <p id='requstText' style='text-align: right; font-size: 10pt;' class='w3-col s8'>
-                            يطلب صاحب ميدان <b> $row[1] </b>  أن يتم تسجيل الميدان الخاص به في التطبيق
+                            يطلب صاحب ميدان $fieldName أن يتم حظر $userName <b> $userPhone </b> من استخدام التطبيق .
                         </p><br>
                         <div class='w3-col s10'>
                             <a class='collapsiblec feed indicac far fa' style='text-align: right; font-size: 14pt ; font-family: bold ; background-color: transparent;'>
                                 التفاصيل </a>
                             </div>
-                            <form  action='remove.php' method='post'>
+                            <form  action='blockRequestResponse.php' method='post'>
                                 <input name='name' value='$row[0]' hidden>
-                                <input style='text-align: center; font-size: 12pt ; background:none!important; color:red; border:none; padding:0!important; cursor: pointer;' href=' id='reject' class='w3-link w3-col s1' name='reject' type='submit' value='رفض'>
-                            </br>
-                            <input style='text-align: center; font-size: 12pt ; color: green ; background:none!important; border:none;  padding:0!important;  cursor: pointer;' href=' id='confirm' class='w3-col s1' name='confirm' type='submit' value='قبول'>
+                                <input name='resons' value='$row[3]' hidden>
+                                <input name='user_id' value='$userRow[0]' hidden>
+                                <input style='text-align: center; font-size: 12pt ; background:none!important; color:red; border:none; padding:0!important; cursor: pointer;' href=' id='reject' class='w3-link w3-col s1' name='block' type='submit' value='حظر'>
+                            </br> 
+                            <input style='text-align: center; font-size: 12pt ; color: green ; background:none!important; border:none;  padding:0!important;  cursor: pointer;' href=' id='confirm' class='w3-col s1' name='ignore' type='submit' value='تجاهل'>
                         </form>
 
                         
@@ -58,16 +61,8 @@ foreach($result as $row)
                     <div class='contentamen'>
                     <hr>
                         <div class='w3-row'>
-                        <div class='w3-col s4' >
-                        owner : $userName |
-                        </div>
-                        <div class='w3-col s8' >
-                        phone : $userPhone
-                        </div>
-                        </div>
-                        <div class='w3-row'>
-                        <div class='w3-col s6' >
-                        city : $field_city
+                        <div class='w3-col s12' >
+                         $row[3]
                         </div>
                         </div>  
                         <hr> 
@@ -85,10 +80,6 @@ foreach($result as $row)
     }
     echo  $return;
             }
-
-    
-}
-}
 
 ?>
 

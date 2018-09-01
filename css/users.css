@@ -1,3 +1,8 @@
+* {box-sizing: border-box;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 #leftDiv{
   position: absolute;
   height: 100% ;
@@ -12,10 +17,9 @@
 
 #card{
   border-width: 16px ;
-  padding-left: 0px ;
+  padding-right: 16px ;
+  margin-top: 8px ;
 }
-
-
 #userInput{
   margin-bottom: 32px ;
 }
@@ -23,15 +27,74 @@
   margin-bottom: 32px ;
 }
 #loginBt{
-  height: 92px ;
+  height: 66px ;
 }
 #requstText{
   text-align: right;
-  font-size: 16pt ;
+  font-size: 10pt ;
 }
 
 #blockList{
   position: absolute;
   left: 90% ;
   top: 90% ;
+}
+#searching{
+  position: absolute;
+  left: 70% ;
+  top: 10% ;
+}
+#addUserBt{
+  position: absolute;
+  left: 3% ;
+  top: 90% ;
+}
+.topnav {
+  position: absolute;
+  left: 75%;
+  overflow: hidden;
+}
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border:1px;
+  border-color: #ddd;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 7px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #e9e9e9;  
+  }
 }

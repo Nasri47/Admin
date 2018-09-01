@@ -1,17 +1,21 @@
 <?php
+session_start();
 
+    if (!isset($_SESSION['login_user'])) {
+    header('Location: index.php');
+    }
 $id = $_POST["name"];
 
 
    include 'connection.php';
    if (isset($_POST['reject']))
         {
-           $qury = "UPDATE `fields` SET `exepted` = 0 WHERE `fields`.`field_id` = $id";
-           mysqli_query($conn, $qury) ;
+          $query = $conn->prepare("UPDATE `field` SET `block_state` = 2 WHERE `field`.`field_id` = $id"); 
+         $query->execute();
            header("location: registRequists.php");
         }elseif (isset($_POST['confirm'])) {
-            $qury = "UPDATE `fields` SET `exepted` = 1 WHERE `fields`.`field_id` = $id";
-           mysqli_query($conn , $qury);
+          $qury = $conn->prepare("UPDATE `field` SET `block_state` = 1 WHERE `field`.`field_id` = $id"); 
+         $qury->execute();
            header("location: registRequists.php");
         }
 ?>

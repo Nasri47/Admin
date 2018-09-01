@@ -1,10 +1,9 @@
-<?php
-?>
 <html>
 	<title>Fields</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/fields.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<body>
 
@@ -25,10 +24,21 @@
 				<div id="leftSide" class="w3-panel w3-center">
 				</div>
 			</div>
-				<a href="index.php" class="w3-bar-item w3-button w3-padding-16 w3-col s1 w3-center">Sign out</a>
+				<a href="logout.php" class="w3-bar-item w3-button w3-padding-16 w3-col s1 w3-center">Sign out</a>
 		</div>
 
+		
+
 	    <a href="addField.html" style="position: absolute; left: 90% ; top: 90% ; position: fixed;" class="w3-button w3-teal">Add Field</a>
+	    <a href="suspendedList.php" style="position: absolute; left: 3% ; top: 90% ; position: fixed;" class="w3-button w3-red">Suspended fields</a>
+	    <div class="topnav">
+  <div class="search-container">
+    <form action="searchField.php" method="GET">
+      <input style="border: 1px solid #e9e9e9;" type="text" placeholder="Search.." name="query">
+      <button type="submit" value="search"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
 
 	</body>
 </html>

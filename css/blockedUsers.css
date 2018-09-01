@@ -12,7 +12,8 @@
 
 #card{
   border-width: 16px ;
-  padding-left: 0px ;
+  padding-right: 16px ;
+  margin-top: 8px ;
 }
 
 
@@ -23,9 +24,9 @@
   margin-bottom: 32px ;
 }
 #loginBt{
-  height: 92px ;
+  height: 66px ;
 }
 #requstText{
   text-align: right;
-  font-size: 16pt ;
+  font-size: 10pt ;
 }

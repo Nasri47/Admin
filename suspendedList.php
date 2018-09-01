@@ -1,5 +1,5 @@
 <?php
-	include 'fields.php' ;
+	include 'fieldsSuspended.php' ;
 	include 'connection.php';
 
     session_start();
@@ -11,11 +11,31 @@
      $query->execute();
      $result = $query->fetchall();
 
+     echo "<div class='w3-bar w3-row'>
+                        <div class='w3-col s4'>
+                            <div id='leftSide' class='w3-panel'></div>
+                        </div>
+                        <div class='w3-col s4' >
+                <div id='card' style='padding:0px ; margin:8px; padding-right:16px' class=' w3-border'>
+                    <div class='w3-bar w3-row'>
+                    
+                            <p id='requstText' style='text-align: right; font-size: 12pt; ' class='w3-col s8'>
+                            Suspended Fields
+                    </div>
+                </div>
+            </div>
+                        <div class='w3-col s4'>
+                            <div id='leftSide' class='w3-panel w3-center'>
+                            </div>
+                        </div>
+                    </div>
+            ";
+
     foreach($result as $row)
     {
         $return = "";   
 
-        if ($row['block_state'] == 1) {
+        if ($row['block_state'] == 2) {
             $ownership = $conn->prepare("SELECT * FROM ownership WHERE $row[0] = field_id"); 
             $ownership->execute();
             $OwnerResult = $ownership->fetchall();

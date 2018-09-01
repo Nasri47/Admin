@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<title>Add Field</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/addUser.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<body>
+
+		<div id="leftDiv" class="w3-container"></div>
+
+		<div id="loginCard" class="w3-container">
+			<div id="card" class="w3-card w3-panel w3-border">
+				<p id="login">Create new field account</p>
+				<form action="addUsers.php" method="post">
+					<input id="fName" required="required" class="w3-input" type="text" name = "username" placeholder="username">
+					<div id="nameMess">
+					  <p id="nameChar" class="invalid">Only <b>characters</b></p>
+					  <p id="nameLng" class="invalid">Maximum <b>30 characters</b></p>
+					  <p id="spaces" class="valid">No <b>spaces allowed</b></p>
+					</div>
+
+					<input id="phone" required="required" class="w3-input" type="text" name = "phone" placeholder="admin phone">
+					<div id="phoneMess">
+					  <p id="phoneNum" class="invalid">Only <b>numbers</b></p>
+					  <p id="phoneLng" class="invalid">Length <b>10 numbers</b></p>
+					</div>
+					<input id="pass" required="required" class="w3-input" type="password" name = "password" placeholder="password">
+					<div id="passMess">
+					  <p id="passLChar" class="invalid">A <b>lowercase</b> letter</p>
+					  <p id="pasUChar" class="invalid">A <b>capital (uppercase)</b> letter</p>
+					  <p id="passNum" class="invalid">A <b>number</b></p>
+					  <p id="passLng" class="invalid">Minimum <b>8 characters</b></p>
+					</div>
+					<input id="passConf" required="required" class="w3-input" type="password" name = "confPassword" placeholder="confirm password">
+					<div id="passConMess">
+					  <p id="match" class="invalid">Matched</b></p>
+					</div>
+					<input id="addButt" class="w3-button w3-teal" type="submit" value="Add" name="submit" disabled>
+				</form>
+			</div>
+		</div>
+
+
+		
+
+		
+
+		
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="js/addUser.js"></script>
+	</body>
+</html>

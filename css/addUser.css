@@ -1,0 +1,100 @@
+#leftDiv{
+  position: absolute;
+  height: 100% ;
+  width: 30px ;
+  background-color: #18A7B5 ;
+}
+#fName{
+  margin-bottom: 32px ;
+}
+#loginCard{
+  position: absolute;
+  left: 36% ;
+  top: 10% ;
+  width: 400px ;
+}
+#pass{
+  margin-bottom: 32px ;
+}
+#passConf{
+  margin-bottom: 32px ;
+}
+
+#card{
+  padding: 16px ;
+  border-width: 16px ;
+}
+
+#login{
+  margin-bottom: 32px ;
+  font-size: 15pt ;
+}
+#addButt{
+  margin-bottom: 32px ;
+}
+#phone{
+  margin-bottom: 32px ;
+}
+#passConf{
+  margin-bottom: 32px ;
+}
+
+#phone{
+  margin-bottom: 32px ;
+}
+
+#userPass{
+  margin-bottom: 32px ;
+}
+
+#loginBt{
+ margin-bottom: 64px ; 
+}
+#nameMess {
+  display:none;
+  color: #000;
+}
+
+#phoneMess {
+  display:none;
+  color: #000;
+}
+#passMess {
+  display:none;
+  color: #000;
+}
+
+#passConMess{
+  display:none;
+  color: #000;
+}
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+}
+#inputt{
+  padding: 10px ;
+  display: block;
+  height: 50px ;
+  width: 100% ;
+  color: #ccc ;
+}
+.contentamen{
+  padding: 0 18px ;
+  max-height: 0 ;
+  overflow : hidden;
+  transition: max-height 0.2s ease-out ;
+}

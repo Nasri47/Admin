@@ -5,25 +5,20 @@ include 'connection.php';
    
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
-      $myusername = mysqli_real_escape_string($conn,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($conn,$_POST['password']); 
-      
-      $sql = "SELECT user_id FROM users WHERE user_name = '$myusername' and user_pass = '$mypassword'";
-      $result = mysqli_query($conn,$sql);
-      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
-      
-      $count = mysqli_num_rows($result);
-
-      // If result matched $myusername and $mypassword, table row must be 1 row
-    
-      if($count == 1) {
-         $_SESSION['login_user'] = $myusername;
-         
+      $myusername = $_POST['username'];
+      $mypassword =   $_POST['password'];
+      $sql = $conn->prepare("SELECT * FROM users WHERE user_name = :name");
+      $sql->bindParam(':name', $myusername);
+      $sql->execute();
+      $result = $sql->fetchall();
+      foreach($result as $qrow) {
+         if ($qrow[4] == 2 && password_verify($mypassword , $qrow[3])) {
+            $_SESSION['login_user'] = $myusername;         
          header("location: fieldsList.php");
       }else {
          echo '<div style="color: red ; position: absolute; top: 500px ; left: 580px ; text-align: center;">The username or <br> password you enterd is no correct</div>';
       }
+         }    
+         
    }
-
 ?> 
